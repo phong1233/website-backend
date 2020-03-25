@@ -1,1 +1,1 @@
-web: gunicorn website-backend:heroku
+web: gunicorn heroku.py
