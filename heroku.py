@@ -6,8 +6,8 @@ from src.services import Service
 app = Flask(__name__)
 
 app.config['MONGODB_SETTINGS'] = {
-    'db': 'websiteBackend',
-    'host': 'mongodb://<dbuser>:<dbpassword>@ds247690.mlab.com:47690/heroku_lbqvnqd4'
+    'host': 'mongodb://<dbuser>:<dbpassword>@ds247690.mlab.com:47690/heroku_lbqvnqd4',
+    'retryWrites': 'false'
 }
 
 db = MongoEngine()
