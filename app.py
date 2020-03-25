@@ -9,7 +9,7 @@ app.config['MONGODB_SETTINGS'] = {
     'db': 'websiteBackend',
     'host': 'mongodb://localhost:27017/websiteDB'
 }
-
+#hi
 db = MongoEngine()
 db.init_app(app)
 
