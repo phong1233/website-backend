@@ -3,3 +3,4 @@ mongoengine
 flask
 Flask-PyMongo
 gunicorn
+flask-mongoengine
