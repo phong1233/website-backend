@@ -7,9 +7,9 @@ app = Flask(__name__)
 
 app.config['MONGODB_SETTINGS'] = {
     'db': 'websiteBackend',
-    'host': 'mongodb+srv://website:123@websitebackend-g3osg.mongodb.net/test?retryWrites=true&w=majority'
+    'host': 'mongodb://<dbuser>:<dbpassword>@ds247690.mlab.com:47690/heroku_lbqvnqd4'
 }
-#hi
+
 db = MongoEngine()
 db.init_app(app)
 
