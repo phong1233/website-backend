@@ -2,8 +2,10 @@ from flask import Flask, jsonify, request
 from flask_mongoengine import MongoEngine
 from src.models import Leaderboard, Score
 from src.services import Service
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 app.config['MONGODB_SETTINGS'] = {
     'host': 'mongodb://website-backend:m9tUkzFzZx0e5wLl@ds247690.mlab.com:47690/heroku_lbqvnqd4',

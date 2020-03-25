@@ -4,6 +4,7 @@ from src.models import Leaderboard, Score
 from src.services import Service
 
 app = Flask(__name__)
+CORS(app)
 
 app.config['MONGODB_SETTINGS'] = {
     'db': 'websiteBackend',

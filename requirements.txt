@@ -6,3 +6,4 @@ gunicorn
 flask-mongoengine
 dnspython
 pymongo[srv]
+flask-cors
