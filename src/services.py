@@ -27,6 +27,10 @@ class Service():
     @staticmethod
     def get_leaderboard(game):
         new_leaderboard = Leaderboard.objects(game=game).first()
+        if(new_leaderboard is None):
+            new_lead = Leaderboard(game=game)
+            new_lead.save()
+            new_leaderboard = new_lead
         json_lead = new_leaderboard.to_json()
         dicts = json.loads(json_lead)
         return dicts['leaderboard']

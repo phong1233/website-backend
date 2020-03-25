@@ -6,7 +6,7 @@ from src.services import Service
 app = Flask(__name__)
 
 app.config['MONGODB_SETTINGS'] = {
-    'host': 'mongodb://heroku_lbqvnqd4:m9tUkzFzZx0e5wLl@ds247690.mlab.com:47690/heroku_lbqvnqd4',
+    'host': 'mongodb://website-backend:m9tUkzFzZx0e5wLl@ds247690.mlab.com:47690/heroku_lbqvnqd4',
     'retryWrites': 'false'
 }
 

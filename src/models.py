@@ -5,5 +5,5 @@ class Score(mongoengine.EmbeddedDocument):
     score = mongoengine.IntField(required=True)
 
 class Leaderboard(mongoengine.Document):
-    game = mongoengine.StringField(required=True,)
+    game = mongoengine.StringField(required=True)
     leaderboard = mongoengine.SortedListField(mongoengine.EmbeddedDocumentField(Score), ordering="score", reverse=True, default=[])
