@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_mongoengine import MongoEngine
 from flask_socketio import SocketIO
@@ -8,7 +9,7 @@ app = Flask(__name__)
 app.register_blueprint(simple_page)
 CORS(app)
 app.config['MONGODB_SETTINGS'] = {
-    'host': 'mongodb://website-backend:m9tUkzFzZx0e5wLl@ds247690.mlab.com:47690/heroku_lbqvnqd4',
+    'host': os.environ['MONGODB_URI'],
     'retryWrites': 'false'
 }
 db = MongoEngine()
