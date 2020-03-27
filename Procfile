@@ -1,1 +1,1 @@
-web: gunicorn --worker-class eventlet heroku:app
+web: gunicorn --worker-class eventlet app:app
