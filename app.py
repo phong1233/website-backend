@@ -15,7 +15,7 @@ app.config['MONGODB_SETTINGS'] = {
 }
 db = MongoEngine()
 db.init_app(app)
-socketio = SocketIO(app, cors_allowed_origins='https://www.phonglehigh.tech')
+socketio = SocketIO(app, cors_allowed_origins='*')
 
 socketio.on_namespace(DrawWebSocket('/draw'))
 
